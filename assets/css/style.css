@@ -1476,7 +1476,7 @@ p.cta__text {
 }
 .one-row-sticky .tablepresstble {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
   place-items: center;
 }
 .tableimg {
@@ -1539,7 +1539,7 @@ p.cta__text {
 }
 
 .one-row-sticky .tablegotobtn a {
-  width: 60%;
+  width: 90%;
   margin: auto;
   height: 45px;
   box-shadow: 0 0 0 0 rgba(50, 132, 241, 0.7);
