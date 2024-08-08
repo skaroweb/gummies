@@ -251,7 +251,11 @@ h6 {
 #header .logo img {
   max-height: 55px;
 }
-
+@media (max-width: 768px) {
+  #header .logo img {
+    max-height: 45px;
+  }
+}
 .scrolled-offset {
   margin-top: 70px;
 }

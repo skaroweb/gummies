@@ -991,11 +991,24 @@
     }
 }
 
-// Call the function to set equal height when the window is loaded
-window.onload = setEqualHeight;
+function checkAndSetEqualHeight() {
+    // Check if the screen width is greater than a typical desktop width (e.g., 1024px)
+    if (window.innerWidth > 1024) {
+        setEqualHeight();
+    } else {
+        // Reset the height if on a smaller screen (optional)
+        var boxes = document.getElementsByClassName('equal_height');
+        for (var i = 0; i < boxes.length; i++) {
+            boxes[i].style.height = 'auto';
+        }
+    }
+}
 
-// You may also want to call setEqualHeight() when the window is resized
-window.onresize = setEqualHeight;
+// Call the function to set equal height when the window is loaded
+window.onload = checkAndSetEqualHeight;
+
+// Also call the function when the window is resized
+window.onresize = checkAndSetEqualHeight;
       </script>
       <script src="assets/vendor/aos/aos.js"></script>
       <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
